@@ -18,6 +18,7 @@
         app:srcCompat="@drawable/img" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
@@ -27,80 +28,194 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:srcCompat="@drawable/verified"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="229dp" />
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/verified" />
 
     <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="5.876"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="44dp"
         android:text="76.5k"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="96dp"
         android:text="149"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Fundraising"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:text="Followers"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
         android:text="Following"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
+        android:id="@+id/materialButton2"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#1FBA61"
         android:text="Follow"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintEnd_toStartOf="@+id/materialButton"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/category_main"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cardedge"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="378dp" />
+        <TextView
+            android:id="@+id/category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Medical"
+            android:textColor="#1FBA61"
+            android:textSize="13sp" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#1FBA61"
+        android:text="About"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton2" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Messages"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:text="Fundraising"
         android:textColor="#1FBA61"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintEnd_toStartOf="@+id/materialButton4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/materialButton3"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/white"
+        android:text="Prayers"
+        android:textColor="#1FBA61"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="@+id/materialButton3"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="About"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton3" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="jjjGSZHCsertydrfgtjhtdh,mbxjjjjkufyiiiiiiifhvjkggjliigkkkkkkkkkkeotuuuuuoobczdvkz.DHvbljSZDBH?vjlbxzn,.vSDJKhfjxcfnfskjkjaksjkadMNVXMNVDSKJHFSDHFJSHFLWHFLWooooooooooooorouteopqwserszmfbfhyp;7t87ufghhhhhhhhewrysdfgdjkwsetgbjksdbhgjksdbhkgjhsdkjghsajidghbgbhghfgugyfgdftgdtdtdethfvhgasdifyhgahfghgsduzygfhgshfgfgfdkeruwi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 
 
